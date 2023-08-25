@@ -1,0 +1,67 @@
+<html lang="PT-BR">
+    <head>
+        <meta charset="UTF-8">
+        <style>
+            body {
+                display: flex;/*Selecionar todo o display*/
+                justify-content: center;/*Posicionar o sim e o não*/
+                align-items: center;/*Centralizar os itens*/
+                height: 100vh;/*Tamanho da escrita*/
+                background-color: #0c3c7a;/*Cor de fundo*/
+            }
+
+            a {
+                text-decoration: none;/*Para o link não ficar sublinhado*/
+            }
+
+            .box{
+                font-size: 20px;
+                color: white;
+                height: 250px;
+                border-radius: 10px;
+                flex-direction: column;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+            }
+
+            .buttons-container {
+                display: flex;
+                justify-content: space-around;
+                height: 50px;
+                width: 150px;
+            }
+
+            button{
+                height: 30px;
+                width: 50px;
+                background: white;
+                border-radius: 5px;
+                color: blue;
+                font-weight: 600;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="box">
+            <p>Cruzeiro é o maior de minas ?</p>
+            <div class="buttons-container">
+                <button>
+                    <a href="index.HTML">Sim</a>
+                </button>
+                <button id="no">Não</button>
+            </div>
+        </div>
+    </body>
+    <script>
+        let button = document.getElementById("no");
+        let height = window.innerHeight - 50;
+        let width = window.innerWidth - 50;
+
+        button.addEventListener("mouseover", function () {
+            button.style.position = "absolute";
+            button.style.top = Math.random() * height + "px";
+            button.style.left = Math.random() * width + "px";
+        })
+    </script>
+</html>
